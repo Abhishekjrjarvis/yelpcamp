@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YelpCamp</title>
+     	<link rel="stylesheet" href="/style/landing.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" 					type="text/javascript" async>
+		</script>
+    </head>
+    <body>
+    	<style type="text/css">
+			body {
+			  background-color: #000;
+			}
+
+			#landing-header {
+			  z-index: 1;
+			  position: relative;
+			  text-align: center;
+			  padding-top: 40vh;
+			}
+
+			#landing-header h1 {
+			  color: #fff;
+			}
+			hr{
+				width: 30%;
+				opacity: 0.5;
+			}
+
+			.slideshow { 
+			  position: fixed;
+			  width: 100%;
+			  height: 100%;
+			  top: 0;
+			  left: 0;
+			  z-index: 0;
+			  list-style: none;
+			  margin: 0;
+			  padding: 0;
+			}
+
+			.slideshow li { 
+			  width: 100%;
+			  height: 100%;
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  background-size: cover;
+			  background-position: 50% 50%;
+			  background-repeat: no-repeat;
+			  opacity: 0;
+			  z-index: 0;
+			  animation: imageAnimation 50s linear infinite; 
+			}
+
+
+			.slideshow li:nth-child(1) { 
+			  background-image: url(http://i.imgur.com/K3mPv14.jpg) 
+			}
+			.slideshow li:nth-child(2) { 
+			  background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+			  animation-delay: 10s; 
+			}
+			.slideshow li:nth-child(3) { 
+			  background-image: url(http://i.imgur.com/emvhOnb.jpg);
+			  animation-delay: 20s; 
+			}
+			.slideshow li:nth-child(4) { 
+			  background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+			  animation-delay: 30s; 
+			}
+			.slideshow li:nth-child(5) { 
+			  background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+			  animation-delay: 40s; 
+			}
+
+			@keyframes imageAnimation { 
+			  0% { 
+				opacity: 0; 
+				animation-timing-function: ease-in;
+			  }
+			  10% {
+				opacity: 1;
+				animation-timing-function: ease-out;
+			  }
+			  20% {
+				opacity: 1
+			  }
+			  30% {
+				opacity: 0
+			  }
+			}
+
+			/* Older browser support - .no-cssanimations class added by modernizr */
+			.no-cssanimations .slideshow li {
+				opacity: 1;
+			}
+		</style>
+		<div class="container">
+			<nav id="mainnav"class="navbar navbar-expand-lg navbar-dark bg-info bd-navbar fixed-top">
+				<a href="/"class="navbar-brand ">YelpCamp</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link  " href="#" tabindex="3"><span class="sr-only">(current)</span></a>
+			  </li>
+			 </ul>
+
+		  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto navbar-right ">
+					  <li>
+						  <a class="nav-link "href="/register">SignUp</a>
+					  </li>	
+					  <li>
+						  <a class="nav-link "href="/login">Login</a>
+					  </li>
+					  <li>
+						  <a class="nav-link " href="/logout">Logout</a>
+					  </li>	
+				
+					</ul>
+			</div>
+
+		  </div>
+		</nav>
+			
+		</div>
+		
+		<div id="landing-header">
+			<h1>Welcome to YelpCamp!</h1>
+			<hr>
+			<a href="/campground" class="btn btn-lg btn-success">View All Campgrounds</a>
+		</div>
+
+		<ul class="slideshow">
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		</ul>
+	</body>
+</html>
+<%- include ("partials/footer") %>
